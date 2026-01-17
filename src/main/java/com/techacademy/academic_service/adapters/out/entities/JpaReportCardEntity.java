@@ -1,6 +1,6 @@
 package com.techacademy.academic_service.adapters.out.entities;
 
-import com.techacademy.academic_service.domain.Grade;
+import com.techacademy.academic_service.domain.entities.Grade;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;

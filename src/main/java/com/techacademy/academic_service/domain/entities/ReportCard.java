@@ -1,4 +1,4 @@
-package com.techacademy.academic_service.domain;
+package com.techacademy.academic_service.domain.entities;
 
 import java.math.BigDecimal;
 import java.util.List;
