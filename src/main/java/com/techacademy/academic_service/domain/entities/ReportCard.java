@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.util.List;
 
 public class ReportCard {
-    private Long id;
     private Long studentId;
     private String studentName;
 
@@ -18,20 +17,11 @@ public class ReportCard {
     }
 
     public ReportCard(Long id, Long studentId, List<Grade> grades, String studentName, BigDecimal average, String status) {
-        this.id = id;
         this.studentId = studentId;
         this.grades = grades;
         this.studentName = studentName;
         this.average = average;
         this.status = status;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public Long getStudentId() {

@@ -11,10 +11,19 @@ public class Grade {
     public Grade(){
     }
 
-    public Grade(Long studentId, String subject, BigDecimal value) {
+    public Grade(Long id, Long studentId, String subject, BigDecimal value) {
+        this.id = id;
         this.studentId = studentId;
         this.subject = subject;
         this.value = value;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getStudentId() {
