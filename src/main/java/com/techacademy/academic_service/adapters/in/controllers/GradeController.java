@@ -29,7 +29,7 @@ public class GradeController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Grade>> getGradesByStudentIdAndSubject(@RequestParam Long id, @RequestParam String subject){
-        return ResponseEntity.ok(gradeService.getAllGradesByStudentIdAndSubject(id, subject));
+    public ResponseEntity<List<Grade>> getGradesByStudentIdAndSubject(@RequestParam Long studentId, @RequestParam String subject){
+        return ResponseEntity.ok(gradeService.getAllGradesByStudentIdAndSubject(studentId, subject));
     }
 }
