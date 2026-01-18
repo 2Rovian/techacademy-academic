@@ -1,11 +1,13 @@
 # 🏫 Academic Service — Gestão de Notas e Boletins
 
-Este repositório contém o **Serviço Auxiliar** do sistema de gestão escolar proposto no  
+Este repositório contém o **Academic Service**, serviço auxiliar do sistema de gestão escolar proposto no  
 [Desafio Técnico Júnior da StralooHealth](https://github.com/straloohealth/Teste-T-cnico---N-vel-Junior-2026.1).
+
+Este serviço é responsável pelo **gerenciamento de notas**, **cálculo de médias** e **geração de boletins escolares**.
 
 ---
 
-## 🏗 Stack Tecnológica
+## 🧰 Stack Tecnológica
 
 - Java (Spring Boot)
 - PostgreSQL
@@ -15,9 +17,7 @@ Este repositório contém o **Serviço Auxiliar** do sistema de gestão escolar 
 ## 🏗 Arquitetura
 
 - **Estilo arquitetural:** Microserviços com bancos de dados independentes  
-- **Padrão adotado:** Arquitetura Hexagonal (Ports and Adapters)  
-
----
+- **Padrão adotado:** Arquitetura Hexagonal (Ports and Adapters)
 
 ## 📦 Modelos de Dados (Objetos)
 
@@ -67,16 +67,17 @@ Este repositório contém o **Serviço Auxiliar** do sistema de gestão escolar 
 ```
 
 ## 🎓 Grade Controller
-| Método | Endpoint             | Descrição             |
-| ------ | -------------------- | --------------------- |
-| GET    | `/api/grades/{id}`      | Lista todas as notas do aluno por id |
-| GET    | `/api/grades?studentId={id}&subject={subject}` | Lista todas notas tendo id e subject como query params  |
-| POST   | `/api/grades`      | Registra uma nova nota    |
+| Método | Endpoint                                       | Descrição                                      |
+| ------ | ---------------------------------------------- | ---------------------------------------------- |
+| GET    | `/api/grades/{studentId}`                      | Retorna todas as notas de um aluno             |
+| GET    | `/api/grades?studentId={id}&subject={subject}` | Retorna notas filtradas por aluno e disciplina |
+| POST   | `/api/grades`                                  | Registra uma nova nota                         |
 
 ## 📚 ReportCard Controller
-| Método | Endpoint               | Descrição             |
-| ------ | ---------------------- | --------------------- |
-| GET    | `/api/report-cards/{studentId}`      | Retorna o boletim do aluno por Id |
+| Método | Endpoint                        | Descrição                         |
+| ------ | ------------------------------- | --------------------------------- |
+| GET    | `/api/report-cards/{studentId}` | Gera e retorna o boletim do aluno |
+
 
 ## 🔌 Ports
 - core-service: `http://localhost:8081`  
