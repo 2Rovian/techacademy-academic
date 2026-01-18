@@ -16,13 +16,15 @@ public class ReportCard {
     public ReportCard(){
     }
 
-    public ReportCard(Long id, Long studentId, List<Grade> grades, String studentName, BigDecimal average, String status) {
+    public ReportCard(Long studentId, List<Grade> grades, String studentName, BigDecimal average, String status) {
         this.studentId = studentId;
         this.grades = grades;
         this.studentName = studentName;
         this.average = average;
         this.status = status;
     }
+
+
 
     public Long getStudentId() {
         return studentId;
