@@ -5,26 +5,19 @@ import java.util.List;
 
 public class ReportCard {
     private Long studentId;
-    private String studentName;
-
     private List<Grade> grades;
-
     private BigDecimal average;
-
     private String status;
 
     public ReportCard(){
     }
 
-    public ReportCard(Long studentId, List<Grade> grades, String studentName, BigDecimal average, String status) {
+    public ReportCard(Long studentId, List<Grade> grades, BigDecimal average, String status) {
         this.studentId = studentId;
         this.grades = grades;
-        this.studentName = studentName;
         this.average = average;
         this.status = status;
     }
-
-
 
     public Long getStudentId() {
         return studentId;
@@ -34,16 +27,12 @@ public class ReportCard {
         this.studentId = studentId;
     }
 
-    public String getStudentName() {
-        return studentName;
-    }
-
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
-    }
-
     public List<Grade> getGrades() {
         return grades;
+    }
+
+    public void setGrades(List<Grade> grades) {
+        this.grades = grades;
     }
 
     public BigDecimal getAverage() {

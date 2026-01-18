@@ -11,10 +11,10 @@ import java.util.List;
 @Service
 public class GradeCalculator {
 
-    public ReportCard generateReportCard(Long studentId, String studentName, List<Grade> grades) {
+    public ReportCard generateReportCard(Long studentId, List<Grade> grades) {
         BigDecimal average = calculateAverage(grades);
         String status = average.compareTo(BigDecimal.valueOf(6)) >= 0 ? "APPROVED" : "REPROVED";
-        return new ReportCard(studentId, grades, studentName, average, status);
+        return new ReportCard(studentId, grades, average, status);
     }
 
     private BigDecimal calculateAverage(List<Grade> grades) {

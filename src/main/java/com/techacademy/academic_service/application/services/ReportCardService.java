@@ -15,8 +15,8 @@ public class ReportCardService {
         this.gradeCalculator = gradeCalculator;
     }
 
-    public ReportCard generate(Long studentId, String studentName) {
+    public ReportCard generate(Long studentId) {
         var grades = gradeRepository.findByStudentId(studentId);
-        return gradeCalculator.generateReportCard(studentId, studentName, grades);
+        return gradeCalculator.generateReportCard(studentId, grades);
     }
 }

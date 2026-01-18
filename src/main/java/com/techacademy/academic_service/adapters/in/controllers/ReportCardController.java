@@ -7,15 +7,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("report-cards")
+@RequestMapping("/api/report-cards")
 public class ReportCardController {
     private final ReportCardService reportCardService;
     public ReportCardController(ReportCardService reportCardService) {
         this.reportCardService = reportCardService;
     }
 
-    @GetMapping(value = "/studentId")
-    public ResponseEntity<ReportCard> getReportCard(@PathVariable Long studentId, @RequestParam String studentName){
-        return ResponseEntity.ok(reportCardService.generate(studentId, studentName));
+    @GetMapping("/{studentId}")
+    public ResponseEntity<ReportCard> getReportCard(@PathVariable Long studentId){
+        return ResponseEntity.ok(reportCardService.generate(studentId));
     }
 }
