@@ -2,11 +2,13 @@ package com.techacademy.academic_service.domain.services;
 
 import com.techacademy.academic_service.domain.entities.Grade;
 import com.techacademy.academic_service.domain.entities.ReportCard;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.List;
 
+@Service
 public class GradeCalculator {
 
     public ReportCard generateReportCard(Long studentId, String studentName, List<Grade> grades) {

@@ -3,12 +3,14 @@ package com.techacademy.academic_service.adapters.out.repositories;
 import com.techacademy.academic_service.adapters.out.entities.JpaGradeEntity;
 import com.techacademy.academic_service.domain.entities.Grade;
 import com.techacademy.academic_service.domain.repository.GradeRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Repository
 public class GradeRepositoryImpl implements GradeRepository {
 
     private final JpaGradeRepository jpaGradeRepository;
