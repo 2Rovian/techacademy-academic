@@ -1,0 +1,83 @@
+# 🏫 Academic Service — Gestão de Notas e Boletins
+
+Este repositório contém o **Serviço Auxiliar** do sistema de gestão escolar proposto no  
+[Desafio Técnico Júnior da StralooHealth](https://github.com/straloohealth/Teste-T-cnico---N-vel-Junior-2026.1).
+
+---
+
+## 🏗 Stack Tecnológica
+
+- Java (Spring Boot)
+- PostgreSQL
+
+---
+
+## 🏗 Arquitetura
+
+- **Estilo arquitetural:** Microserviços com bancos de dados independentes  
+- **Padrão adotado:** Arquitetura Hexagonal (Ports and Adapters)  
+
+---
+
+## 📦 Modelos de Dados (Objetos)
+
+### 🎓 Grade
+```
+{
+  "id": 5,
+  "studentId": 2,
+  "subject": "Matemática",
+  "value": 6.00
+}
+```
+
+### 📚 ReportCard 
+```
+{
+    "studentId": 2,
+    "grades": [
+        {
+            "id": 5,
+            "studentId": 2,
+            "subject": "Matemática",
+            "value": 6.00
+        },
+        {
+            "id": 6,
+            "studentId": 2,
+            "subject": "Matemática",
+            "value": 5.50
+        },
+        {
+            "id": 7,
+            "studentId": 2,
+            "subject": "História",
+            "value": 6.50
+        },
+        {
+            "id": 8,
+            "studentId": 2,
+            "subject": "Geografia",
+            "value": 7.00
+        }
+    ],
+    "average": 6.25,
+    "status": "APPROVED"
+}
+```
+
+## 🎓 Grade Controller
+| Método | Endpoint             | Descrição             |
+| ------ | -------------------- | --------------------- |
+| GET    | `/api/grades/{id}`      | Lista todas as notas do aluno por id |
+| GET    | `/api/grades?studentId={id}&subject={subject}` | Lista todas notas tendo id e subject como query params  |
+| POST   | `/api/grades`      | Registra uma nova nota    |
+
+## 📚 ReportCard Controller
+| Método | Endpoint               | Descrição             |
+| ------ | ---------------------- | --------------------- |
+| GET    | `/api/report-cards/{studentId}`      | Retorna o boletim do aluno por Id |
+
+## 🔌 Ports
+- core-service: `http://localhost:8081`  
+- academic-service: `http://localhost:8082`
