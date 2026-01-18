@@ -18,7 +18,11 @@ public class GradeService {
         return gradeRepository.save(grade);
     }
 
-//    Grade save(Grade grade);
-//    List<Grade> findByStudentId(Long id);
-//    List<Grade> findByStudentIdAndSubject(Long id, String subject);
+    public List<Grade> getAllGradesByStudentId(Long id){
+        return gradeRepository.findByStudentId(id);
+    }
+
+    public List<Grade> getAllGradesByStudentIdAndSubject(Long id, String subject) {
+        return gradeRepository.findByStudentIdAndSubject(id, subject);
+    }
 }
