@@ -18,7 +18,7 @@ public class GradeController {
         this.gradeService = gradeService;
     }
 
-    @GetMapping(name = "/id")
+    @GetMapping(value = "/id")
     public ResponseEntity<List<Grade>> getGradesByStudentId(@PathVariable Long id) {
         return ResponseEntity.ok(gradeService.getAllGradesByStudentId(id));
     }
