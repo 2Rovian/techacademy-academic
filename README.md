@@ -68,6 +68,36 @@ Este serviço é responsável pelo **gerenciamento de notas**, **cálculo de mé
 }
 ```
 
+## Requisitos funcionais
+- Gerar Boletim: O serviço principal deve receber a requisição e consultar o serviço auxiliar para consolidar as notas e retornar o boletim de um ou mais alunos.
+```
+{
+  "studentId": 6,
+  "grades": [
+    {
+      "id": 19,
+      "studentId": 6,
+      "subject": "Matemática",
+      "value": 9.00
+    },
+    {
+      "id": 20,
+      "studentId": 6,
+      "subject": "História",
+      "value": 8.00
+    },
+    {
+      "id": 21,
+      "studentId": 6,
+      "subject": "Geografia",
+      "value": 8.50
+    }
+  ],
+  "average": 8.50,
+  "status": "APPROVED"
+}
+```
+
 ## 🎓 Grade Controller
 | Método | Endpoint                                       | Descrição                                      |
 | ------ | ---------------------------------------------- | ---------------------------------------------- |
