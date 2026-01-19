@@ -9,17 +9,14 @@ Este serviço é responsável pelo **gerenciamento de notas**, **cálculo de mé
 
 ---
 
-## 🧰 Stack Tecnológica
+## 🏗 Stack 
 
-- Java (Spring Boot)
-- PostgreSQL
+- **Linguagem e framework:** Java 21 (Spring Boot)
+- **Banco de dados:** PostgreSQL
+- **Estilo arquitetural:** Microserviços com bancos de dados independentes  
+- **Padrão adotado:** Arquitetura Hexagonal (Ports and Adapters)  
 
 ---
-
-## 🏗 Arquitetura
-
-- **Estilo arquitetural:** Microserviços com bancos de dados independentes  
-- **Padrão adotado:** Arquitetura Hexagonal (Ports and Adapters)
 
 ## 📦 Modelos de Dados (Objetos)
 
