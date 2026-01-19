@@ -66,7 +66,7 @@ Este serviço é responsável pelo **gerenciamento de notas**, **cálculo de mé
 ```
 
 ## Requisitos funcionais
-- Gerar Boletim: O serviço principal deve receber a requisição e consultar o serviço auxiliar para consolidar as notas e retornar o boletim de um ou mais alunos.
+- Gerar Boletim: O serviço principal deve receber a requisição e consultar o serviço auxiliar para consolidar as notas e retornar o boletim de um ou mais alunos. ( GET /api/report-cards/{studentId} )
 ```
 {
   "studentId": 6,
