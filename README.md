@@ -5,6 +5,8 @@ Este repositório contém o **Academic Service**, serviço auxiliar do sistema d
 
 Este serviço é responsável pelo **gerenciamento de notas**, **cálculo de médias** e **geração de boletins escolares**.
 
+[Repositório do microserviço de gestão alunos e turmas](https://github.com/2Rovian/techacademy-core/)
+
 ---
 
 ## 🧰 Stack Tecnológica
